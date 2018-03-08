@@ -129,7 +129,8 @@ class Renderer(base.Renderer):
 class AddForm(base.AddForm):
     """Portlet add form.
     """
-    form_fields = form.Fields(IUsertrack)
+    #form_fields = form.Fields(IUsertrack)
+    schema = IUsertrack
     label = _(u"Add a user track portlet")
     description = _(u"help_portlet",
             default=u"The user track portlet shows the current active users.")
@@ -142,7 +143,8 @@ class AddForm(base.AddForm):
 class EditForm(base.EditForm):
     """Portlet edit form.
     """
-    form_fields = form.Fields(IUsertrack)
+    #form_fields = form.Fields(IUsertrack)
+    schema = IUsertrack
     label = _(u"Edit the user track portlet")
     description = _(u"help_portlet",
             default=u"The user track portlet shows the current active users.")
